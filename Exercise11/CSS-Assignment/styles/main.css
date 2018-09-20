@@ -1,0 +1,149 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0 auto;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.container {
+    width: 960px;
+    margin: 0 auto;
+}
+
+.logo {
+    margin: 10px;
+    display: block;
+}
+
+ul {
+    list-style: none;
+    margin: 0 auto;
+}
+
+header nav {
+    background-color: #a00;
+    color: white;
+    font-size: 24px;
+    text-align: center;
+    border-radius: 30px;
+    margin: 10px 0;
+}
+
+header nav li {
+    display: inline-block;
+    padding: 5px 10px;
+    text-align: center;
+}
+
+.masthead {
+    display: grid;
+    grid-template: 1fr 1fr / 2fr 1fr;
+    grid-gap: 10px;
+    margin: 10px 10px 20px;
+}
+
+.primary-image {
+    grid-area: 1 / 1 / 3 / 3;
+    margin: 0;
+}
+
+.top {
+    grid-area: 1 / 2 / 2 / 3;
+    margin: 0;
+    width: 310px;
+    height: 149.5px
+}
+
+.bottom {
+    grid-area: 2 / 2 / 3 / 3;
+    margin: 0;
+    width: 310px;
+    height: 149.5px
+}
+
+.section-header {
+    width: 100%;
+    border-top: 1px solid #a00;
+    border-bottom: 1px solid #a00; 
+    margin: 20px auto;
+    text-align: center;
+    color: #a00;
+    font-size: 18px;
+}
+
+.slides {
+    display: flex;
+    justify-content: space-around;
+    margin: 0 auto;
+    padding: 0;
+}
+
+.slides li {
+    display: inline-flex;
+}
+
+article header h2{
+    color: #a00; 
+    font-size: 24px;
+    margin-top: 10px;
+}
+
+
+.article-list {
+    width: 67%;
+    float: left;
+    border-right: 1px solid #a00;
+    display: grid;
+    grid-template-rows: 1fr 1fr 1fr;
+}
+
+aside {
+    width: 33%;
+    float: right;
+    text-align: center;
+    padding-left: 10px;
+    
+}
+
+article img {
+    float: left;
+    max-width: 50%;
+}
+
+.article-content {
+    float: right;
+    max-width: 50%;
+    padding: 0 10px; 
+}
+
+article {
+    border-bottom: 1px solid #a00;
+    padding: 10px;
+    justify-self: center;
+    margin-right: 10px;
+}
+
+
+
+footer {
+    clear: both;
+}
+
+footer h3 {
+    float: left;
+    margin: 10px;
+}
+
+footer nav {
+    float: right;
+    margin: 10px;
+}
+
+footer nav li {
+    display: inline-block;
+    padding: 5px 10px;
+    text-align: right;
+    color: #a00;
+}
