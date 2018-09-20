@@ -3,8 +3,14 @@ var arrayItems = [];
 
 function update() {
     //////////////////////Your Code Starts here
-
-
+    function removeInvalidClass () {
+        var removeInvalid = document.querySelectorAll('input');
+        for (let i = 1, j = 4; i < j; i += 1) {
+            removeInvalid[i].classList.remove("invalid");
+        };
+        
+    }
+    removeInvalidClass();
 
     ///Part 1
     var firstName = getValue('firstName');
@@ -69,12 +75,12 @@ function update() {
         let elmFirst = document.getElementById('firstName');
         let elmLast = document.getElementById('lastName');
         if (lastName && !firstName) {
-            elmFirst.className += "invalid";
+            elmFirst.classList.add("invalid");;
         } else if (firstName && !lastName) {
-            elmLast.className += "invalid";
+            elmLast.classList.add("invalid");;
         } else if (!firstName && !lastName) {
-            elmFirst.className += "invalid";
-            elmLast.className += "invalid";
+            elmFirst.classList.add("invalid");;
+            elmLast.classList.add("invalid");;
         }
     }
     addClassInvalidToName(firstName, lastName);
@@ -82,7 +88,7 @@ function update() {
     function addClassInvalidToEmail(isValidEmail) {
         let elmEmailAddress = document.getElementById('emailAddress')
         if (!isValidEmail) {
-            elmEmailAddress.className += "invalid";
+            elmEmailAddress.classList.add("invalid");;
         }
     }
 
@@ -91,7 +97,7 @@ function update() {
     function addClassInvalidToNumber(isValidNumber) {
         let elmRandomNumber = document.getElementById('randomNumber');
         if (!isValidNumber()) {
-            elmRandomNumber.className += "invalid";
+            elmRandomNumber.classList.add("invalid");;
         }
     }
 
