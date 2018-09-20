@@ -52,7 +52,7 @@ function update() {
             return true;
         }
     };
-    
+
     document.getElementById('p3_valid').innerHTML = isValidNumber(randomNumber);
 
     // Part 4
@@ -64,17 +64,19 @@ function update() {
     document.getElementById('p4_valid').innerHTML = arrayItems;
     console.log(arrayItems);
 
-    addClassInvalidToName = (firstName, lastName) => {
-        let elm = document.getElementById;
-        if (!firstName && !lastName) {
-            elm('firstName').classList.add("invalid");
-            elm('lastName').classList.add("invalid");
+  function addClassInvalidToName(firstName,lastName) {
+    let elmFirst = document.getElementById('firstName');
+    let elmLast = document.getElementById('lastName')     
+    if (!firstName && !lastName) {
+            elmFirst.className += "invalid";
+            elmLast.className += "invalid";
         } else if (!firstName) {
-            elm('firstName').classList.add("invalid");
+            elmFirst.className += "invalid";
         } else if (!lastName) {
-            elm('lastName').classList.add("invalid");
+            elmLast.className += "invalid";
         }
-    };
+    }
+    addClassInvalidToName(firstName);
 
 
 
