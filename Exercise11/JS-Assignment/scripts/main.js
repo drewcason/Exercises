@@ -30,8 +30,9 @@ function update() {
 
     // Part 2
     var emailAddress = getValue('emailAddress');
+    var elmEmail = document.getElementById('p2_email');
     console.log(emailAddress);
-    document.getElementById('p2_email').innerHTML = emailAddress;
+    elmEmail.innerHTML = emailAddress;
 
     var isValidEmail = (emailAddress.indexOf('@') > -1);
     document.getElementById('p2_valid').innerHTML = isValidEmail;
@@ -64,24 +65,37 @@ function update() {
     document.getElementById('p4_valid').innerHTML = arrayItems;
     console.log(arrayItems);
 
-  function addClassInvalidToName(firstName,lastName) {
-    let elmFirst = document.getElementById('firstName');
-    let elmLast = document.getElementById('lastName')     
-    if (!firstName && !lastName) {
+    function addClassInvalidToName(firstName, lastName) {
+        let elmFirst = document.getElementById('firstName');
+        let elmLast = document.getElementById('lastName');
+        if (lastName && !firstName) {
             elmFirst.className += "invalid";
+        } else if (firstName && !lastName) {
             elmLast.className += "invalid";
-        } else if (!firstName) {
+        } else if (!firstName && !lastName) {
             elmFirst.className += "invalid";
-        } else if (!lastName) {
             elmLast.className += "invalid";
         }
     }
-    addClassInvalidToName(firstName);
+    addClassInvalidToName(firstName, lastName);
 
+    function addClassInvalidToEmail(isValidEmail) {
+        let elmEmailAddress = document.getElementById('emailAddress')
+        if (!isValidEmail) {
+            elmEmailAddress.className += "invalid";
+        }
+    }
 
+    addClassInvalidToEmail(isValidEmail);
 
+    function addClassInvalidToNumber(isValidNumber) {
+        let elmRandomNumber = document.getElementById('randomNumber');
+        if (!isValidNumber()) {
+            elmRandomNumber.className += "invalid";
+        }
+    }
 
-
+    addClassInvalidToNumber(isValidNumber);
     ////////////////////////Your code ends here.
 
 }
