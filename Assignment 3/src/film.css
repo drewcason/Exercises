@@ -1,0 +1,32 @@
+#window {
+    width: 80vw;
+    padding-top: calc(.5625 * 80vw);
+    position: relative;
+    margin: 0 auto;
+    overflow: hidden;
+    border-radius: 3px;
+    box-shadow: 2px 2px 2px silver;
+}
+
+#window img {
+    z-index: 10;
+    position: absolute;
+    top: 0;
+    left: 80vw;
+    width: 80vw;
+    animation-iteration-count: 1;
+}
+
+
+#window img.slideout {
+    left: -80vw;
+    transition-duration: 1s;
+    animation-iteration-count: 1;
+}
+
+
+#window img.slidein {
+    left: 0;
+    transition-duration: 1s;
+    animation-iteration-count: 1;
+}
